@@ -35,8 +35,9 @@ This feature allows readers to look up local volunteer events in case they would
   * **Javascript**: This stretch goal will require the use of a third *API call*. The method( ) *event listener* set to 'click' is added to the button the reader clicks. This will initiate the third *API call* that passes the search value obtained from the *input field*. We will also set up a function that creates a section to display the information.
 
 ## Feeling Generous?
-  * This feature will allow readers to look up charities to causes our readers are passionate about.
-  **Technology Implementation**:
+This feature will allow readers to look up charities to causes our readers are passionate about.
+
+**Technology Implementation**:
   * **User Inferface**: The reader will be able to enter a cause they are passionate about, as well as a location, in a *text submit* field; then proceed to click a *search button*
   * **Javascript**: This stretch goal will require the use of a fourth *API call*. The method( ) *event listener* set to 'click' is added to the button the reader clicks. This will initiate the fourth *API call* that passes the search value obtained from the *input field*.
 
