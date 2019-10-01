@@ -93,7 +93,6 @@ img {
   box-shadow: var(--shadow);
 }
 /* https://i.imgur.com/howxT0q.jpg Black/White Photo*/
-/* https://i.imgur.com/5qBu2Ry.jpg Color Photo*/
 
 .showcase h1 {
   font-size: 4rem;
@@ -119,6 +118,22 @@ img {
   padding: 3rem;
 }
 
+/* Portfolio Section */
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+.portfolio img {
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.button-new {
+  margin-top: 5px;
+}
+
 /* Footer Section */
 footer {
   margin-top: 2rem;
@@ -132,8 +147,8 @@ footer {
 @media (max-width: 700px) {
   .top-container {
     grid-template-areas:
-    'showcase showcase'
-    'top-box-a top-box-b';
+    'showcase showcase';
+    /* 'top-box-a top-box-b'; */
   }
 
   .showcase h1 {
@@ -158,8 +173,12 @@ footer {
 @media (max-width: 500px) {
   .top-container {
     grid-template-areas:
-    'showcase'
-    'top-box-a'
-    'top-box-b';
+    'showcase';
+    /* 'top-box-a'
+    'top-box-b'; */
   }
+}
+
+a:hover .modal {
+  
 }
