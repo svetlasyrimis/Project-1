@@ -8,6 +8,9 @@ const search = document.querySelector("#news-input");
 const startDate = document.querySelector("#start");
 const endDate = document.querySelector("#end");
 const sectionOutput = document.querySelector(".info");
+const modalContent = document.querySelector(".modalInnerText");
+const modal = document.querySelector(".modal");
+const span = document.querySelector("span");
 
 let newsList = (news) => {
   sectionOutput.innerHTML = ``;
@@ -21,19 +24,34 @@ let newsList = (news) => {
     newsTitle.textContent = `${news[i].title}`;
     let newsDescription = document.createElement("p");
     newsDescription.textContent = `${news[i].description}`;
-    let modalCreate = document.createElement("button");
-    modalCreate.textContent = `Article Content`;
+
+    let modalBtn = document.createElement("button");
+    modalBtn.class = `modal-btn`;
+    modalBtn.textContent = `Description`;
     let newsURLCreate = document.createElement("a");
     newsURLCreate.href = `${news[i].url}`;
     newsURLCreate.target = `_blank`;
-    newsURLCreate.textContent = `Take me to site`;
+    newsURLCreate.textContent = `Website Link`;
     newsInfo.append(newsTitle);
     newsInfo.append(newsDescription);
-    newsInfo.append(modalCreate);
+    newsInfo.append(modalBtn);
     newsInfo.append(newsURLCreate);
 
     sectionOutput.append(newsImage);
     sectionOutput.append(newsInfo);
+
+    modalBtn.addEventListener('click', () => {
+      modalContent.textContent = `${news[i].content}`;
+      modal.style.display = "block";
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    });
   }
 };
 
@@ -42,3 +60,4 @@ button.addEventListener('click', async () => {
   let response = await axios.get(`${baseURL}${search.value}&from=${startDate.value}&to=${endDate.value}${apiKey}`);
   newsList(response.data.articles)
 });
+
