@@ -1,11 +1,8 @@
-// Photo Selectors
 const baseURL2 = "https://pixabay.com/api/?key=13799332-3f90039e97dccd582e335c8f6&q="
 const buttonNew = document.querySelector(".button-new");
 const searchNew = document.querySelector(".input-new");
 const photoOutput = document.querySelector(".portfolio")
 
-// Pixabay API
-// API Key = 13799332-3f90039e97dccd582e335c8f6
 let photoList = (photo) => {
   photoOutput.innerHTML = ``;
   for (let i = 0; i < 20; i++) {

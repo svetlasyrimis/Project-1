@@ -1,6 +1,3 @@
-//Text link to NewsAPI.org that reads: Powered by News API
-
-// News Selectors
 const baseURL = "https://newsapi.org/v2/everything?q=";
 const apiKey = "&sortBy=popularity&apiKey=07f3568073274011bc90905e922e120e";
 const button = document.querySelector("#news-button");
@@ -22,9 +19,10 @@ let newsList = (news) => {
     let newsInfo = document.createElement('div');
     let newsTitle = document.createElement("h2");
     newsTitle.textContent = `${news[i].title}`;
+    let newsSource = document.createElement("h4");
+    newsSource.textContent = `${news[i].source.name}`;
     let newsDescription = document.createElement("p");
     newsDescription.textContent = `${news[i].description}`;
-
     let modalBtn = document.createElement("button");
     modalBtn.class = `modal-btn`;
     modalBtn.textContent = `Description`;
@@ -33,6 +31,7 @@ let newsList = (news) => {
     newsURLCreate.target = `_blank`;
     newsURLCreate.textContent = `Website Link`;
     newsInfo.append(newsTitle);
+    newsInfo.append(newsSource);
     newsInfo.append(newsDescription);
     newsInfo.append(modalBtn);
     newsInfo.append(newsURLCreate);
@@ -60,4 +59,3 @@ button.addEventListener('click', async () => {
   let response = await axios.get(`${baseURL}${search.value}&from=${startDate.value}&to=${endDate.value}${apiKey}`);
   newsList(response.data.articles)
 });
-

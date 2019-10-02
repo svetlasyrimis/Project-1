@@ -118,7 +118,6 @@ button .modal-btn {
   justify-content: center;
   box-shadow: var(--shadow);
 }
-/* https://i.imgur.com/howxT0q.jpg Black/White Photo*/
 
 .showcase h1 {
   font-size: 4rem;
@@ -210,7 +209,6 @@ footer {
   .top-container {
     grid-template-areas:
     'showcase showcase';
-    /* 'top-box-a top-box-b'; */
   }
 
   .showcase h1 {
@@ -236,7 +234,5 @@ footer {
   .top-container {
     grid-template-areas:
     'showcase';
-    /* 'top-box-a'
-    'top-box-b'; */
   }
 }
