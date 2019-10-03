@@ -51,12 +51,16 @@ This feature will allow readers to look up charities to causes our readers are p
 
 ![Wireframe Photo](https://i.imgur.com/kiUlHC8.png)
 
+# Finished Product
+
+![Good News! App](https://i.imgur.com/MS3Mbfq.png)
+
 # Difficulties (Post Completion)
 
 Completing Project 1 had many bumps along the way. Aside from general formatting issues, here are some of the more unique difficulties I encountered:
 
   * Not all documentation is created equal
-    * Searching for API's that 1) contained exactly the information I was looking for 2) presented documentation that was understandable to me 3) free...was very difficult to find. I had to trailor my project based on which API documentation I could understad, followed by what information it contained.
+    * Searching for API's that 1) contained exactly the information I was looking for 2) presented documentation that was understandable to me 3) free...was very difficult to find. I had to trailor my project based on which API documentation I could understad, followed by what information it contained. I also couldn't find a free API for charities or volunteer events; which prevented me from completing my original idea on a completed app.
   * Synchronous? Or is it asynchronous? Or is is sychronous?...It's javascript!
     * All else equal, placement of my functions in js code mattered...sometimes. Making calls to two different APIs in the same js file interfered with each other, depending on placement in the code
 
